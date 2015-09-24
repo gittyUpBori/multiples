@@ -12,9 +12,9 @@ class ViewController: UIViewController {
 
 
     // Properties
-    var sum = 0
-    var numMultiple = 0
     var numPlus = 0
+    var numMultiple = 0
+    var sum = 0
 
 
     // Outlets
@@ -40,12 +40,13 @@ class ViewController: UIViewController {
 
     @IBAction func onClickAddBtn(sender: UIButton!) {
         addBtnLbl.hidden = true
-
         additionOpsLbl.hidden = false
 
-        additionOps()
+        numMultiple = Int(multToAddTxt.text!)!
 
-        if gameOver() {
+        if sum <= 50 {
+            additionOps()
+        } else {
             restartGame()
         }
     }
@@ -77,24 +78,16 @@ class ViewController: UIViewController {
 
 
     func additionOps() {
-        numMultiple = Int(multToAddTxt.text!)!
         sum = numPlus + numMultiple
-
         additionOpsLbl.text = "\(numPlus) + \(numMultiple) = \(sum)"
-    }
-
-
-    func gameOver() -> Bool {
-        if sum >= 30 {
-            return true
-        } else {
-            return false
-        }
+        numPlus = sum
     }
 
 
     func restartGame() {
+        numPlus = 0
         numMultiple = 0
+        sum = 0
         multToAddTxt.text = ""
 
         screenOne()
