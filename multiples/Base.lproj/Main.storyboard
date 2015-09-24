@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Q4y-x3-fQt"/>
                                     <constraint firstAttribute="width" constant="195" id="RJk-SU-JaU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msQ-nA-jzb" userLabel="playBtn">
